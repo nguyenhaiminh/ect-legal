@@ -9,8 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ux.css" />
 </head>
 <body>
+  <a class="skip-link" href="#question">Đi đến ô đặt câu hỏi</a>
   <header class="topbar">
     <a class="brand" href="#" aria-label="Trang chủ ECT Legal"><span class="brand-mark">E</span><span>ECT <b>LEGAL</b></span></a>
     <nav aria-label="Điều hướng chính"><button class="nav-link active" data-view="ask">Hỏi đáp</button><button class="nav-link" data-view="library">Thư viện pháp lý</button><button class="nav-link" data-view="checklist">Kiểm tra hợp đồng</button></nav>
@@ -23,6 +25,7 @@
         <div class="eyebrow">PHÁP LUẬT VIỆT NAM · TRA CỨU CÓ CĂN CỨ</div>
         <h1>Hợp đồng điện tử,<br><em>hiểu đúng để ký chắc.</em></h1>
         <p>Hỏi về hợp đồng lao động, giao dịch thương mại, văn bản điện tử và chữ ký số. Mỗi câu trả lời đều chỉ rõ căn cứ và việc cần làm.</p>
+        <div class="trust-row"><span>✓ Nguồn chính thống</span><span>✓ Trả lời có căn cứ</span><span>✓ Không lưu câu hỏi</span></div>
       </div>
 
       <div class="ask-layout">
@@ -37,15 +40,16 @@
         </aside>
 
         <div class="workspace">
+          <div class="workspace-bar"><div><span class="online-dot"></span> Trợ lý đang sẵn sàng</div><button id="clearChat" type="button">↻ Cuộc trò chuyện mới</button></div>
           <div id="welcome" class="welcome-card">
             <div class="avatar">§</div>
-            <div><h2>Xin chào, tôi là ECT Legal.</h2><p>Hãy mô tả tình huống hoặc chọn một câu hỏi thường gặp bên dưới.</p></div>
+            <div><h2>Xin chào, tôi là ECT Legal.</h2><p>Hãy mô tả tình huống hoặc chọn một câu hỏi thường gặp bên dưới.</p><div class="answer-path"><span>1. Nêu tình huống</span><span>2. Nhận căn cứ</span><span>3. Xem việc cần làm</span></div></div>
           </div>
           <div id="chat" class="chat" aria-live="polite"></div>
           <div id="suggestions" class="suggestions"></div>
           <form id="askForm" class="composer">
             <textarea id="question" rows="1" maxlength="600" placeholder="Ví dụ: Ký hợp đồng lao động bằng OTP có hợp pháp không?" aria-label="Nhập câu hỏi pháp lý"></textarea>
-            <div class="composer-foot"><span><kbd>Enter</kbd> để gửi · <kbd>Shift</kbd> + <kbd>Enter</kbd> xuống dòng</span><button type="submit" aria-label="Gửi câu hỏi">Gửi <span>→</span></button></div>
+            <div class="composer-foot"><span><kbd>Enter</kbd> để gửi · <kbd>Shift</kbd> + <kbd>Enter</kbd> xuống dòng</span><div class="send-group"><small id="charCount">0/600</small><button type="submit" aria-label="Gửi câu hỏi">Gửi <span>→</span></button></div></div>
           </form>
           <p class="disclaimer">Thông tin mang tính tham khảo, không thay thế tư vấn pháp lý cho một vụ việc cụ thể.</p>
         </div>
