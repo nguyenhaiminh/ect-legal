@@ -1,48 +1,9 @@
-<!doctype html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ECT Legal — Tra cứu hợp đồng điện tử</title>
-  <meta name="description" content="Tra cứu pháp lý hợp đồng điện tử và chữ ký số tại Việt Nam">
-  <link rel="stylesheet" href="styles.css?v=20261015-2"><link rel="stylesheet" href="ux.css?v=20261015-2">
-</head>
-<body>
-<div class="app-shell">
-  <aside class="sidebar">
-    <a class="logo" href="#"><span class="logo-icon">§</span><span>ECT <i>LEGAL</i></span></a>
-    <div class="side-caption">TRA CỨU PHÁP LÝ</div>
-    <nav class="side-nav" aria-label="Điều hướng">
-      <button class="nav-link active" data-view="ask"><span>⌕</span><b>Hỏi đáp</b></button>
-      <button class="nav-link" data-view="library"><span>▤</span><b>Căn cứ pháp lý</b></button>
-      <button class="nav-link" data-view="checklist"><span>✓</span><b>Checklist trước khi ký</b></button>
-    </nav>
-    <div class="side-divider"></div><div class="side-caption">NHÓM CHỦ ĐỀ</div>
-    <div class="side-topics">
-      <button class="topic active" data-topic="all"><span class="topic-dot all"></span><b>Tất cả câu hỏi</b><small>12</small></button>
-      <button class="topic" data-topic="labor"><span class="topic-dot blue"></span><b>Hợp đồng lao động</b><small>3</small></button>
-      <button class="topic" data-topic="trade"><span class="topic-dot orange"></span><b>Hợp đồng thương mại</b><small>3</small></button>
-      <button class="topic" data-topic="document"><span class="topic-dot purple"></span><b>Văn bản điện tử</b><small>3</small></button>
-      <button class="topic" data-topic="signature"><span class="topic-dot green"></span><b>Chữ ký số</b><small>3</small></button>
-    </div>
-    <div class="side-footer"><span class="secure-icon">◈</span><div><b>Dữ liệu riêng tư</b><p>Câu hỏi không được lưu trên máy chủ.</p></div></div>
-  </aside>
-  <main class="main-panel">
-    <header class="topbar"><div class="mobile-brand"><span class="logo-icon">§</span> ECT <i>LEGAL</i></div><div class="breadcrumb">ECT Legal <span>/</span> <b>Tra cứu</b></div><div class="top-actions"><span class="live"><i></i> Hệ thống hoạt động</span><span class="date">Cập nhật 15/10/2026</span></div></header>
-    <section id="ask" class="view active content-wrap">
-      <div class="page-intro"><div><div class="eyebrow">TRỢ LÝ PHÁP LÝ ĐIỆN TỬ</div><h1>Bạn muốn tra cứu<br><em>điều gì hôm nay?</em></h1><p>Chọn một câu hỏi gợi ý. ECT Legal sẽ trả lời theo cấu trúc dễ kiểm tra: kết luận, điều luật liên quan và việc cần làm.</p></div><div class="intro-mark">§<small>01</small></div></div>
-      <div class="workspace-bar"><div><span class="online-dot"></span> Chọn câu hỏi để bắt đầu</div><button id="clearChat" type="button">↻ Đặt lại</button></div>
-      <div class="question-board">
-        <div class="board-head"><div><span class="board-kicker">CÂU HỎI GỢI Ý</span><h2>Chọn theo tình huống</h2></div><span class="board-count">12 câu hỏi</span></div>
-        <div id="suggestions" class="suggestions"></div>
-      </div>
-      <div id="welcome" class="welcome-card"><div class="welcome-icon">✓</div><div><b>Câu trả lời có căn cứ, không đoán mò.</b><p>Mỗi câu trả lời hiển thị văn bản pháp luật và đường dẫn nguồn chính thức.</p></div><span class="welcome-arrow">→</span></div>
-      <div id="chat" class="chat" aria-live="polite"></div>
-      <form id="askForm" class="composer" aria-hidden="true"><textarea id="question" tabindex="-1"></textarea></form>
-      <p class="disclaimer">Thông tin tham khảo, không thay thế tư vấn luật sư cho vụ việc cụ thể.</p>
-    </section>
-    <section id="library" class="view content-wrap narrow"><div class="section-heading"><div><div class="eyebrow">LEGAL SOURCE MAP</div><h1>Căn cứ pháp lý</h1><p>Danh mục văn bản điều chỉnh hợp đồng điện tử, thông điệp dữ liệu và chữ ký số.</p></div><div class="source-stat"><b>12</b><span>văn bản trọng tâm</span></div></div><div class="source-toolbar"><span>Danh mục hiện hành &amp; sắp hiệu lực</span><input id="sourceSearch" type="search" placeholder="Tìm theo tên hoặc số hiệu…"></div><div id="sourceGrid" class="source-grid"></div><div class="reference-note"><b>Đọc nhanh</b><p>Luật Giao dịch điện tử 2023 là khung chung; Nghị định 23/2025/NĐ-CP quy định trực tiếp về chữ ký điện tử và dịch vụ tin cậy; Nghị định 337/2025/NĐ-CP và Thông tư 08/2026/TT-BNV điều chỉnh hợp đồng lao động điện tử.</p></div></section>
-    <section id="checklist" class="view content-wrap narrow"><div class="section-heading"><div><div class="eyebrow">BEFORE YOU SIGN</div><h1>Checklist trước khi ký</h1><p>8 điểm cần kiểm tra để hồ sơ có nền tảng chứng cứ tốt hơn.</p></div><div id="score" class="source-stat"><b>0/8</b><span>hoàn tất</span></div></div><div id="checkItems" class="check-items"></div><div id="checkResult" class="check-result"><span>!</span><div><b>Chưa đủ dữ liệu để đánh giá</b><p>Hoàn thành checklist để nhận khuyến nghị.</p></div></div></section>
-  </main>
-</div>
-<script src="app.js?v=20261015-2"></script>
-</body></html>
+<!doctype html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ECT Legal — Legal intelligence</title><meta name="description" content="Bản đồ pháp lý cho hợp đồng điện tử và chữ ký số"><link rel="stylesheet" href="styles.css?v=20261015-3"><link rel="stylesheet" href="ux.css?v=20261015-3"></head>
+<body><a class="skip" href="#question">Bỏ qua đến nội dung</a><div class="shell">
+<header class="header"><a class="wordmark" href="#"><span>ECT</span><i>LEGAL</i></a><div class="header-center"><span class="crumb">LEGAL INTELLIGENCE</span><span class="slash">/</span><b>Việt Nam · 2026</b></div><div class="header-right"><span class="live"><i></i> Đang cập nhật</span><span class="avatar">LT</span></div></header>
+<div class="layout"><aside class="rail"><div class="rail-label">WORKSPACE</div><nav><button class="nav-link active" data-view="ask"><span class="ico">◒</span><b>Tra cứu</b><em>01</em></button><button class="nav-link" data-view="library"><span class="ico">▤</span><b>Bản đồ văn bản</b><em>12</em></button><button class="nav-link" data-view="checklist"><span class="ico">✓</span><b>Trước khi ký</b><em>08</em></button></nav><div class="rail-note"><span>◎</span><b>Phạm vi tra cứu</b><p>Hợp đồng điện tử<br>Chữ ký điện tử<br>Hợp đồng lao động<br>Thương mại điện tử</p></div><div class="rail-bottom">Cập nhật lần cuối<br><b>15 tháng 10, 2026</b></div></aside>
+<main class="main">
+<section id="ask" class="view active"><div class="hero"><div><div class="eyebrow">01 — TRA CỨU PHÁP LÝ</div><h1>Biết mình<br><em>đang ký gì.</em></h1><p>Chọn một câu hỏi bên dưới để xem kết luận, điều luật liên quan và checklist chứng cứ cần giữ lại.</p></div><div class="hero-stamp"><strong>§</strong><span>ECT<br>LEGAL</span></div></div><div class="topic-strip"><span>CHỦ ĐỀ</span><button class="topic active" data-topic="all">Tất cả</button><button class="topic" data-topic="labor">Lao động</button><button class="topic" data-topic="trade">Thương mại</button><button class="topic" data-topic="document">Văn bản</button><button class="topic" data-topic="signature">Chữ ký số</button></div><div class="question-header"><div><span class="section-kicker">CÂU HỎI GỢI Ý</span><h2>Bắt đầu từ tình huống của bạn</h2></div><button id="clearChat" class="reset" type="button">↻ Đặt lại</button></div><div id="suggestions" class="suggestions"></div><div id="welcome" class="welcome"><span class="welcome-mark">↗</span><div><b>Tra cứu có căn cứ</b><p>Mỗi câu trả lời đều chỉ rõ văn bản, điều khoản và nguồn chính thức.</p></div><span class="welcome-rule"></span></div><div id="chat" class="chat" aria-live="polite"></div><form id="askForm" class="hidden-form" aria-hidden="true"><textarea id="question" tabindex="-1"></textarea></form><p class="disclaimer">Thông tin tham khảo, không thay thế tư vấn pháp lý cho vụ việc cụ thể.</p></section>
+<section id="library" class="view library"><div class="section-top"><div><div class="eyebrow">02 — SOURCE MAP</div><h1>Bản đồ văn bản</h1><p>Những văn bản tạo thành khung pháp lý cho giao dịch điện tử tại Việt Nam.</p></div><div class="big-number"><strong>12</strong><span>văn bản<br>trọng tâm</span></div></div><div class="filter-row"><span>ĐANG THEO DÕI</span><input id="sourceSearch" type="search" placeholder="Tìm luật, nghị định, số hiệu…"></div><div id="sourceGrid" class="source-grid"></div><div class="note"><b>Cách đọc</b><span>Luật là khung chung. Nghị định và thông tư cụ thể hóa cách thực hiện. Luôn kiểm tra ngày hiệu lực trước khi áp dụng.</span></div></section>
+<section id="checklist" class="view library"><div class="section-top"><div><div class="eyebrow">03 — BEFORE SIGNING</div><h1>Trước khi ký</h1><p>8 câu hỏi kiểm tra nhanh để tăng khả năng chứng minh giao dịch.</p></div><div id="score" class="big-number"><strong>0/8</strong><span>hoàn tất</span></div></div><div id="checkItems" class="check-items"></div><div id="checkResult" class="check-result"><span>!</span><div><b>Chưa đủ dữ liệu để đánh giá</b><p>Hoàn thành checklist để nhận khuyến nghị.</p></div></div></section>
+</main></div><footer><span>ECT LEGAL</span><span>Legal intelligence · Vietnam</span><a href="https://github.com/nguyenhaiminh/ect-legal" target="_blank">Mã nguồn ↗</a></footer></div><script src="app.js?v=20261015-3"></script></body></html>
