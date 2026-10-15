@@ -40,15 +40,16 @@
         </aside>
 
         <div class="workspace">
-          <div class="workspace-bar"><div><span class="online-dot"></span> Trợ lý đang sẵn sàng</div><button id="clearChat" type="button">↻ Cuộc trò chuyện mới</button></div>
+          <div class="workspace-bar"><div><span class="online-dot"></span> Chọn một câu hỏi để bắt đầu</div><button id="clearChat" type="button">↻ Bắt đầu lại</button></div>
           <div id="welcome" class="welcome-card">
             <div class="avatar">§</div>
             <div><h2>Xin chào, tôi là ECT Legal.</h2><p>Hãy mô tả tình huống hoặc chọn một câu hỏi thường gặp bên dưới.</p><div class="answer-path"><span>1. Nêu tình huống</span><span>2. Nhận căn cứ</span><span>3. Xem việc cần làm</span></div></div>
           </div>
           <div id="chat" class="chat" aria-live="polite"></div>
+          <div class="suggestions-heading"><span>CÂU HỎI GỢI Ý</span><small>Chọn câu hỏi phù hợp nhất với tình huống của bạn</small></div>
           <div id="suggestions" class="suggestions"></div>
           <form id="askForm" class="composer">
-            <textarea id="question" rows="1" maxlength="600" placeholder="Ví dụ: Ký hợp đồng lao động bằng OTP có hợp pháp không?" aria-label="Nhập câu hỏi pháp lý"></textarea>
+            <textarea id="question" rows="1" maxlength="600" placeholder="Chọn một câu hỏi gợi ý ở phía trên" aria-label="Nhập câu hỏi pháp lý"></textarea>
             <div class="composer-foot"><span><kbd>Enter</kbd> để gửi · <kbd>Shift</kbd> + <kbd>Enter</kbd> xuống dòng</span><div class="send-group"><small id="charCount">0/600</small><button type="submit" aria-label="Gửi câu hỏi">Gửi <span>→</span></button></div></div>
           </form>
           <p class="disclaimer">Thông tin mang tính tham khảo, không thay thế tư vấn pháp lý cho một vụ việc cụ thể.</p>
@@ -57,7 +58,7 @@
     </section>
 
     <section id="library" class="view narrow">
-      <div class="page-head"><div><div class="eyebrow">KHO NGUỒN ĐÃ ĐỐI CHIẾU</div><h1>Thư viện pháp lý</h1></div><input id="sourceSearch" type="search" placeholder="Tìm văn bản..." /></div>
+      <div class="page-head"><div><div class="eyebrow">KHO NGUỒN ĐÃ ĐỐI CHIẾU</div><h1>Căn cứ pháp lý</h1><p class="lead">Danh mục luật, nghị định và văn bản liên quan đến hợp đồng điện tử, thông điệp dữ liệu và chữ ký số.</p></div><input id="sourceSearch" type="search" placeholder="Tìm văn bản..." /></div>
       <div id="sourceGrid" class="source-grid"></div>
       <div class="reference-note"><b>Nguồn tham khảo giải pháp</b><p>Tham khảo cách triển khai thực tế từ VNPT eContract, MISA eSign và EFY-eCONTRACT; các mô tả của nhà cung cấp không được dùng thay thế quy định pháp luật.</p></div>
     </section>
